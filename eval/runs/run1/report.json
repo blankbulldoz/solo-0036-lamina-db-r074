@@ -1,0 +1,1518 @@
+{
+  "timeline": [
+    {
+      "step": "source-open",
+      "rto_seconds": 0.0731
+    },
+    {
+      "step": "relation-created",
+      "sequence": 1
+    },
+    {
+      "step": "seed-1-3",
+      "sequence": 2,
+      "writes": 3
+    },
+    {
+      "step": "update-round-1",
+      "sequence": 3,
+      "writes": 2
+    },
+    {
+      "step": "update-round-2",
+      "sequence": 4,
+      "writes": 2
+    },
+    {
+      "step": "update-round-3",
+      "sequence": 5,
+      "writes": 2
+    },
+    {
+      "step": "pre-A-state",
+      "sequence": 5,
+      "horizon": 0,
+      "versions": 9
+    },
+    {
+      "step": "backup-A",
+      "bytes": 1169,
+      "head": 5
+    },
+    {
+      "step": "post-A-update-1",
+      "sequence": 6,
+      "writes": 1
+    },
+    {
+      "step": "post-A-update-2",
+      "sequence": 7,
+      "writes": 1
+    },
+    {
+      "step": "post-A-update-3",
+      "sequence": 8,
+      "writes": 1
+    },
+    {
+      "step": "read-tx-open",
+      "snapshot": 8
+    },
+    {
+      "step": "pre-vacuum-update",
+      "sequence": 9,
+      "writes": 1
+    },
+    {
+      "step": "vacuum-pinned-request",
+      "requested": 9,
+      "result": {
+        "horizon": 8,
+        "removed": 9,
+        "retained": 4,
+        "pinned": true
+      }
+    },
+    {
+      "step": "vacuum-advanced",
+      "result": {
+        "horizon": 9,
+        "removed": 1,
+        "retained": 3,
+        "pinned": false
+      },
+      "sequence": 11,
+      "horizon": 9
+    },
+    {
+      "step": "between-vacuums",
+      "sequence": 12,
+      "writes": 1
+    },
+    {
+      "step": "backup-B",
+      "bytes": 801,
+      "head": 12,
+      "horizon": 9
+    },
+    {
+      "step": "post-B-update",
+      "sequence": 13,
+      "writes": 1
+    },
+    {
+      "step": "vacuum-reassert-same-horizon",
+      "result": {
+        "horizon": 9,
+        "removed": 0,
+        "retained": 5,
+        "pinned": false
+      },
+      "head_before": 13,
+      "horizon_after": 9
+    },
+    {
+      "step": "post-B-delete-2",
+      "sequence": 15,
+      "writes": 1
+    },
+    {
+      "step": "backup-C",
+      "bytes": 907,
+      "head": 15,
+      "horizon": 9
+    },
+    {
+      "step": "post-C-update",
+      "sequence": 16,
+      "writes": 1
+    },
+    {
+      "step": "source-head-after-C",
+      "sequence": 16
+    }
+  ],
+  "images": {
+    "A": {
+      "file": "image-A.lmi",
+      "sha256": "a8ea5c85dbd7fcaa9bff0d58fc12381d57f0787c5627405b7fd4148967bcfc39",
+      "digest_self_verifies": true,
+      "format": 1,
+      "head_sequence": 5,
+      "horizon": 0,
+      "relations": [
+        "spectra"
+      ],
+      "relation_created": {
+        "spectra": 1
+      },
+      "version_count": 9,
+      "versions": [
+        {
+          "table": "spectra",
+          "key": "int:1",
+          "sequence": 2,
+          "state": "live"
+        },
+        {
+          "table": "spectra",
+          "key": "int:2",
+          "sequence": 2,
+          "state": "live"
+        },
+        {
+          "table": "spectra",
+          "key": "int:3",
+          "sequence": 2,
+          "state": "live"
+        },
+        {
+          "table": "spectra",
+          "key": "int:1",
+          "sequence": 3,
+          "state": "live"
+        },
+        {
+          "table": "spectra",
+          "key": "int:2",
+          "sequence": 3,
+          "state": "live"
+        },
+        {
+          "table": "spectra",
+          "key": "int:1",
+          "sequence": 4,
+          "state": "live"
+        },
+        {
+          "table": "spectra",
+          "key": "int:3",
+          "sequence": 4,
+          "state": "live"
+        },
+        {
+          "table": "spectra",
+          "key": "int:2",
+          "sequence": 5,
+          "state": "live"
+        },
+        {
+          "table": "spectra",
+          "key": "int:3",
+          "sequence": 5,
+          "state": "live"
+        }
+      ],
+      "bytes": 1169
+    },
+    "B": {
+      "file": "image-B.lmi",
+      "sha256": "d7a97df3ee60d829aa67244eef4795cc5192f459b971deb5eab34a26092af8e2",
+      "digest_self_verifies": true,
+      "format": 1,
+      "head_sequence": 12,
+      "horizon": 9,
+      "relations": [
+        "spectra"
+      ],
+      "relation_created": {
+        "spectra": 1
+      },
+      "version_count": 4,
+      "versions": [
+        {
+          "table": "spectra",
+          "key": "int:2",
+          "sequence": 7,
+          "state": "live"
+        },
+        {
+          "table": "spectra",
+          "key": "int:3",
+          "sequence": 8,
+          "state": "live"
+        },
+        {
+          "table": "spectra",
+          "key": "int:1",
+          "sequence": 9,
+          "state": "live"
+        },
+        {
+          "table": "spectra",
+          "key": "int:2",
+          "sequence": 12,
+          "state": "live"
+        }
+      ],
+      "bytes": 801
+    },
+    "C": {
+      "file": "image-C.lmi",
+      "sha256": "dc6e65f232bbf3af468a5177bc243c9531cdab7101f5369d35ab175d95c1b4be",
+      "digest_self_verifies": true,
+      "format": 1,
+      "head_sequence": 15,
+      "horizon": 9,
+      "relations": [
+        "spectra"
+      ],
+      "relation_created": {
+        "spectra": 1
+      },
+      "version_count": 6,
+      "versions": [
+        {
+          "table": "spectra",
+          "key": "int:2",
+          "sequence": 7,
+          "state": "live"
+        },
+        {
+          "table": "spectra",
+          "key": "int:3",
+          "sequence": 8,
+          "state": "live"
+        },
+        {
+          "table": "spectra",
+          "key": "int:1",
+          "sequence": 9,
+          "state": "live"
+        },
+        {
+          "table": "spectra",
+          "key": "int:2",
+          "sequence": 12,
+          "state": "live"
+        },
+        {
+          "table": "spectra",
+          "key": "int:3",
+          "sequence": 13,
+          "state": "live"
+        },
+        {
+          "table": "spectra",
+          "key": "int:2",
+          "sequence": 15,
+          "state": "tombstone"
+        }
+      ],
+      "bytes": 907
+    }
+  },
+  "cross_checks": [
+    {
+      "check": "vacuum-pinned-by-active-reader",
+      "ok": true,
+      "detail": "requested 9, got {'horizon': 8, 'removed': 9, 'retained': 4, 'pinned': True}"
+    },
+    {
+      "check": "vacuum-advanced-to-9",
+      "ok": true,
+      "detail": "got {'horizon': 9, 'removed': 1, 'retained': 3, 'pinned': False}"
+    },
+    {
+      "check": "vacuum-horizon-monotone-stays-9",
+      "ok": true,
+      "detail": "got {'horizon': 9, 'removed': 0, 'retained': 5, 'pinned': False}"
+    },
+    {
+      "check": "image-A-digest",
+      "ok": true,
+      "detail": "declared a8ea5c85dbd7... computed a8ea5c85dbd7..."
+    },
+    {
+      "check": "image-A-header-order",
+      "ok": true,
+      "detail": "h=0 seq=5"
+    },
+    {
+      "check": "image-B-digest",
+      "ok": true,
+      "detail": "declared d7a97df3ee60... computed d7a97df3ee60..."
+    },
+    {
+      "check": "image-B-header-order",
+      "ok": true,
+      "detail": "h=9 seq=12"
+    },
+    {
+      "check": "image-C-digest",
+      "ok": true,
+      "detail": "declared dc6e65f232bb... computed dc6e65f232bb..."
+    },
+    {
+      "check": "image-C-header-order",
+      "ok": true,
+      "detail": "h=9 seq=15"
+    },
+    {
+      "check": "image-A-v2-exists-in-wal",
+      "ok": true,
+      "detail": "spectra/int:1@2"
+    },
+    {
+      "check": "image-A-v3-exists-in-wal",
+      "ok": true,
+      "detail": "spectra/int:1@3"
+    },
+    {
+      "check": "image-A-v4-exists-in-wal",
+      "ok": true,
+      "detail": "spectra/int:1@4"
+    },
+    {
+      "check": "image-A-v2-exists-in-wal",
+      "ok": true,
+      "detail": "spectra/int:2@2"
+    },
+    {
+      "check": "image-A-v3-exists-in-wal",
+      "ok": true,
+      "detail": "spectra/int:2@3"
+    },
+    {
+      "check": "image-A-v5-exists-in-wal",
+      "ok": true,
+      "detail": "spectra/int:2@5"
+    },
+    {
+      "check": "image-A-v2-exists-in-wal",
+      "ok": true,
+      "detail": "spectra/int:3@2"
+    },
+    {
+      "check": "image-A-v4-exists-in-wal",
+      "ok": true,
+      "detail": "spectra/int:3@4"
+    },
+    {
+      "check": "image-A-v5-exists-in-wal",
+      "ok": true,
+      "detail": "spectra/int:3@5"
+    },
+    {
+      "check": "image-A-head-is-wal-commit-or-vacuum",
+      "ok": true,
+      "detail": "head 5"
+    },
+    {
+      "check": "image-B-v9-exists-in-wal",
+      "ok": true,
+      "detail": "spectra/int:1@9"
+    },
+    {
+      "check": "image-B-v7-exists-in-wal",
+      "ok": true,
+      "detail": "spectra/int:2@7"
+    },
+    {
+      "check": "image-B-v12-exists-in-wal",
+      "ok": true,
+      "detail": "spectra/int:2@12"
+    },
+    {
+      "check": "image-B-v8-exists-in-wal",
+      "ok": true,
+      "detail": "spectra/int:3@8"
+    },
+    {
+      "check": "image-B-head-is-wal-commit-or-vacuum",
+      "ok": true,
+      "detail": "head 12"
+    },
+    {
+      "check": "image-C-v9-exists-in-wal",
+      "ok": true,
+      "detail": "spectra/int:1@9"
+    },
+    {
+      "check": "image-C-v7-exists-in-wal",
+      "ok": true,
+      "detail": "spectra/int:2@7"
+    },
+    {
+      "check": "image-C-v12-exists-in-wal",
+      "ok": true,
+      "detail": "spectra/int:2@12"
+    },
+    {
+      "check": "image-C-v15-exists-in-wal",
+      "ok": true,
+      "detail": "spectra/int:2@15"
+    },
+    {
+      "check": "image-C-v8-exists-in-wal",
+      "ok": true,
+      "detail": "spectra/int:3@8"
+    },
+    {
+      "check": "image-C-v13-exists-in-wal",
+      "ok": true,
+      "detail": "spectra/int:3@13"
+    },
+    {
+      "check": "image-C-head-is-wal-commit-or-vacuum",
+      "ok": true,
+      "detail": "head 15"
+    },
+    {
+      "check": "wal-vacuum-records",
+      "ok": true,
+      "detail": "got [(10, 8), (11, 9), (14, 9)]"
+    },
+    {
+      "check": "wal-complete-history-retained",
+      "ok": true,
+      "detail": "span=[1, 16]"
+    },
+    {
+      "check": "mini-replay-reproduces-image-A",
+      "ok": true,
+      "detail": "head=5 replay_h=0 image_h=0 store_match=True"
+    },
+    {
+      "check": "mini-replay-reproduces-image-B",
+      "ok": true,
+      "detail": "head=12 replay_h=9 image_h=9 store_match=True"
+    },
+    {
+      "check": "mini-replay-reproduces-image-C",
+      "ok": true,
+      "detail": "head=15 replay_h=9 image_h=9 store_match=True"
+    },
+    {
+      "check": "restore-A-stats-match-image",
+      "ok": true,
+      "detail": "stats={'sequence': 5, 'horizon': 0, 'active': [], 'keys': 3, 'versions': 9, 'index_entries': {}, 'journal_records': 0, 'history_base': 5, 'recovered_tail_bytes': 0, 'commits_since_open': 0, 'conflicts_since_open': 0, 'queries_since_open': 0}"
+    },
+    {
+      "check": "restore-A-journal-base",
+      "ok": true,
+      "detail": "base=5 frames=0"
+    },
+    {
+      "check": "restore-A-changes-before-base-410",
+      "ok": true,
+      "detail": "got 410"
+    },
+    {
+      "check": "restore-A-suffix-continues",
+      "ok": true,
+      "detail": "commit={'sequence': 6, 'writes': 1} frames=1"
+    },
+    {
+      "check": "restore-A-restart-durable",
+      "ok": true,
+      "detail": "stats={'sequence': 6, 'horizon': 0, 'active': [], 'keys': 4, 'versions': 10, 'index_entries': {}, 'journal_records': 1, 'history_base': 5, 'recovered_tail_bytes': 0, 'commits_since_open': 0, 'conflicts_since_open': 0, 'queries_since_open': 0}"
+    },
+    {
+      "check": "restore-B-stats-match-image",
+      "ok": true,
+      "detail": "stats={'sequence': 12, 'horizon': 9, 'active': [], 'keys': 3, 'versions': 4, 'index_entries': {}, 'journal_records': 0, 'history_base': 12, 'recovered_tail_bytes': 0, 'commits_since_open': 0, 'conflicts_since_open': 0, 'queries_since_open': 0}"
+    },
+    {
+      "check": "restore-B-journal-base",
+      "ok": true,
+      "detail": "base=12 frames=0"
+    },
+    {
+      "check": "restore-B-changes-before-base-410",
+      "ok": true,
+      "detail": "got 410"
+    },
+    {
+      "check": "restore-B-suffix-continues",
+      "ok": true,
+      "detail": "commit={'sequence': 13, 'writes': 1} frames=1"
+    },
+    {
+      "check": "restore-B-restart-durable",
+      "ok": true,
+      "detail": "stats={'sequence': 13, 'horizon': 9, 'active': [], 'keys': 4, 'versions': 5, 'index_entries': {}, 'journal_records': 1, 'history_base': 12, 'recovered_tail_bytes': 0, 'commits_since_open': 0, 'conflicts_since_open': 0, 'queries_since_open': 0}"
+    },
+    {
+      "check": "restore-C-stats-match-image",
+      "ok": true,
+      "detail": "stats={'sequence': 15, 'horizon': 9, 'active': [], 'keys': 3, 'versions': 6, 'index_entries': {}, 'journal_records': 0, 'history_base': 15, 'recovered_tail_bytes': 0, 'commits_since_open': 0, 'conflicts_since_open': 0, 'queries_since_open': 0}"
+    },
+    {
+      "check": "restore-C-journal-base",
+      "ok": true,
+      "detail": "base=15 frames=0"
+    },
+    {
+      "check": "restore-C-changes-before-base-410",
+      "ok": true,
+      "detail": "got 410"
+    },
+    {
+      "check": "restore-C-suffix-continues",
+      "ok": true,
+      "detail": "commit={'sequence': 16, 'writes': 1} frames=1"
+    },
+    {
+      "check": "restore-C-restart-durable",
+      "ok": true,
+      "detail": "stats={'sequence': 16, 'horizon': 9, 'active': [], 'keys': 4, 'versions': 7, 'index_entries': {}, 'journal_records': 1, 'history_base': 15, 'recovered_tail_bytes': 0, 'commits_since_open': 0, 'conflicts_since_open': 0, 'queries_since_open': 0}"
+    },
+    {
+      "check": "tampered-digest-rejected",
+      "ok": true,
+      "detail": "rc=1"
+    },
+    {
+      "check": "restore-requires-new-dir",
+      "ok": true,
+      "detail": "rc=1"
+    },
+    {
+      "check": "image-A-frozen",
+      "ok": true,
+      "detail": "A=5 final=16"
+    },
+    {
+      "check": "historical-gap-is-6-7-8",
+      "ok": true,
+      "detail": "measured [6, 7, 8]"
+    }
+  ],
+  "restore_probes": {
+    "A": {
+      "rto_seconds": 0.0705,
+      "startup_stats": {
+        "sequence": 5,
+        "horizon": 0,
+        "active": [],
+        "keys": 3,
+        "versions": 9,
+        "index_entries": {},
+        "journal_records": 0,
+        "history_base": 5,
+        "recovered_tail_bytes": 0,
+        "commits_since_open": 0,
+        "conflicts_since_open": 0,
+        "queries_since_open": 0
+      },
+      "installed_journal_header_base": 5,
+      "installed_journal_frames": 0,
+      "reachable_history": {
+        "0": {
+          "http": 410,
+          "error": "snapshot"
+        },
+        "1": {
+          "http": 200,
+          "matched": 0,
+          "rows": []
+        },
+        "2": {
+          "http": 200,
+          "matched": 3,
+          "rows": [
+            {
+              "amplitude": 10,
+              "band": "b1",
+              "sample": 1,
+              "valid": true
+            },
+            {
+              "amplitude": 20,
+              "band": "b2",
+              "sample": 2,
+              "valid": true
+            },
+            {
+              "amplitude": 30,
+              "band": "b3",
+              "sample": 3,
+              "valid": true
+            }
+          ]
+        },
+        "3": {
+          "http": 200,
+          "matched": 3,
+          "rows": [
+            {
+              "amplitude": 11,
+              "band": "b1",
+              "sample": 1,
+              "valid": true
+            },
+            {
+              "amplitude": 21,
+              "band": "b2",
+              "sample": 2,
+              "valid": true
+            },
+            {
+              "amplitude": 30,
+              "band": "b3",
+              "sample": 3,
+              "valid": true
+            }
+          ]
+        },
+        "4": {
+          "http": 200,
+          "matched": 3,
+          "rows": [
+            {
+              "amplitude": 12,
+              "band": "b1",
+              "sample": 1,
+              "valid": true
+            },
+            {
+              "amplitude": 21,
+              "band": "b2",
+              "sample": 2,
+              "valid": true
+            },
+            {
+              "amplitude": 31,
+              "band": "b3",
+              "sample": 3,
+              "valid": true
+            }
+          ]
+        },
+        "5": {
+          "http": 200,
+          "matched": 3,
+          "rows": [
+            {
+              "amplitude": 12,
+              "band": "b1",
+              "sample": 1,
+              "valid": true
+            },
+            {
+              "amplitude": 22,
+              "band": "b2",
+              "sample": 2,
+              "valid": true
+            },
+            {
+              "amplitude": 32,
+              "band": "b3",
+              "sample": 3,
+              "valid": true
+            }
+          ]
+        },
+        "6": {
+          "http": 410,
+          "error": "snapshot"
+        },
+        "7": {
+          "http": 410,
+          "error": "snapshot"
+        },
+        "8": {
+          "http": 410,
+          "error": "snapshot"
+        },
+        "9": {
+          "http": 410,
+          "error": "snapshot"
+        },
+        "10": {
+          "http": 410,
+          "error": "snapshot"
+        },
+        "11": {
+          "http": 410,
+          "error": "snapshot"
+        },
+        "12": {
+          "http": 410,
+          "error": "snapshot"
+        },
+        "13": {
+          "http": 410,
+          "error": "snapshot"
+        },
+        "14": {
+          "http": 410,
+          "error": "snapshot"
+        },
+        "15": {
+          "http": 410,
+          "error": "snapshot"
+        },
+        "16": {
+          "http": 410,
+          "error": "snapshot"
+        }
+      },
+      "changes_at_base": {
+        "http": 200,
+        "body": {
+          "records": [],
+          "cursor": 5,
+          "head": 5,
+          "history_base": 5,
+          "more": false
+        }
+      },
+      "changes_before_base": {
+        "http": 410,
+        "error": "snapshot"
+      },
+      "changes_at_head": {
+        "http": 200,
+        "body": {
+          "records": [],
+          "cursor": 5,
+          "head": 5,
+          "history_base": 5,
+          "more": false
+        }
+      },
+      "new_commit": {
+        "sequence": 6,
+        "writes": 1
+      },
+      "stats_after_new_commit": {
+        "sequence": 6,
+        "horizon": 0,
+        "active": [],
+        "keys": 4,
+        "versions": 10,
+        "index_entries": {},
+        "journal_records": 1,
+        "history_base": 5,
+        "recovered_tail_bytes": 0,
+        "commits_since_open": 1,
+        "conflicts_since_open": 0,
+        "queries_since_open": 5
+      },
+      "journal_frames_after_commit": 1,
+      "changes_covering_new_commit": {
+        "http": 200,
+        "body": {
+          "records": [
+            {
+              "format": 1,
+              "sequence": 6,
+              "kind": "commit",
+              "transaction": "4174d47f0f2f38151d181a513362eda2",
+              "writes": [
+                {
+                  "relation": "spectra",
+                  "key": "int:9",
+                  "row": {
+                    "amplitude": 90,
+                    "band": "b9",
+                    "sample": 9,
+                    "valid": true
+                  }
+                }
+              ]
+            }
+          ],
+          "cursor": 6,
+          "head": 6,
+          "history_base": 5,
+          "more": false
+        }
+      },
+      "restart_stats": {
+        "sequence": 6,
+        "horizon": 0,
+        "active": [],
+        "keys": 4,
+        "versions": 10,
+        "index_entries": {},
+        "journal_records": 1,
+        "history_base": 5,
+        "recovered_tail_bytes": 0,
+        "commits_since_open": 0,
+        "conflicts_since_open": 0,
+        "queries_since_open": 0
+      },
+      "restart_query_http": 200
+    },
+    "B": {
+      "rto_seconds": 0.0688,
+      "startup_stats": {
+        "sequence": 12,
+        "horizon": 9,
+        "active": [],
+        "keys": 3,
+        "versions": 4,
+        "index_entries": {},
+        "journal_records": 0,
+        "history_base": 12,
+        "recovered_tail_bytes": 0,
+        "commits_since_open": 0,
+        "conflicts_since_open": 0,
+        "queries_since_open": 0
+      },
+      "installed_journal_header_base": 12,
+      "installed_journal_frames": 0,
+      "reachable_history": {
+        "0": {
+          "http": 410,
+          "error": "snapshot"
+        },
+        "1": {
+          "http": 410,
+          "error": "snapshot"
+        },
+        "2": {
+          "http": 410,
+          "error": "snapshot"
+        },
+        "3": {
+          "http": 410,
+          "error": "snapshot"
+        },
+        "4": {
+          "http": 410,
+          "error": "snapshot"
+        },
+        "5": {
+          "http": 410,
+          "error": "snapshot"
+        },
+        "6": {
+          "http": 410,
+          "error": "snapshot"
+        },
+        "7": {
+          "http": 410,
+          "error": "snapshot"
+        },
+        "8": {
+          "http": 410,
+          "error": "snapshot"
+        },
+        "9": {
+          "http": 200,
+          "matched": 3,
+          "rows": [
+            {
+              "amplitude": 14,
+              "band": "b1",
+              "sample": 1,
+              "valid": true
+            },
+            {
+              "amplitude": 23,
+              "band": "b2",
+              "sample": 2,
+              "valid": true
+            },
+            {
+              "amplitude": 33,
+              "band": "b3",
+              "sample": 3,
+              "valid": true
+            }
+          ]
+        },
+        "10": {
+          "http": 200,
+          "matched": 3,
+          "rows": [
+            {
+              "amplitude": 14,
+              "band": "b1",
+              "sample": 1,
+              "valid": true
+            },
+            {
+              "amplitude": 23,
+              "band": "b2",
+              "sample": 2,
+              "valid": true
+            },
+            {
+              "amplitude": 33,
+              "band": "b3",
+              "sample": 3,
+              "valid": true
+            }
+          ]
+        },
+        "11": {
+          "http": 200,
+          "matched": 3,
+          "rows": [
+            {
+              "amplitude": 14,
+              "band": "b1",
+              "sample": 1,
+              "valid": true
+            },
+            {
+              "amplitude": 23,
+              "band": "b2",
+              "sample": 2,
+              "valid": true
+            },
+            {
+              "amplitude": 33,
+              "band": "b3",
+              "sample": 3,
+              "valid": true
+            }
+          ]
+        },
+        "12": {
+          "http": 200,
+          "matched": 3,
+          "rows": [
+            {
+              "amplitude": 14,
+              "band": "b1",
+              "sample": 1,
+              "valid": true
+            },
+            {
+              "amplitude": 24,
+              "band": "b2",
+              "sample": 2,
+              "valid": true
+            },
+            {
+              "amplitude": 33,
+              "band": "b3",
+              "sample": 3,
+              "valid": true
+            }
+          ]
+        },
+        "13": {
+          "http": 410,
+          "error": "snapshot"
+        },
+        "14": {
+          "http": 410,
+          "error": "snapshot"
+        },
+        "15": {
+          "http": 410,
+          "error": "snapshot"
+        },
+        "16": {
+          "http": 410,
+          "error": "snapshot"
+        }
+      },
+      "changes_at_base": {
+        "http": 200,
+        "body": {
+          "records": [],
+          "cursor": 12,
+          "head": 12,
+          "history_base": 12,
+          "more": false
+        }
+      },
+      "changes_before_base": {
+        "http": 410,
+        "error": "snapshot"
+      },
+      "changes_at_head": {
+        "http": 200,
+        "body": {
+          "records": [],
+          "cursor": 12,
+          "head": 12,
+          "history_base": 12,
+          "more": false
+        }
+      },
+      "new_commit": {
+        "sequence": 13,
+        "writes": 1
+      },
+      "stats_after_new_commit": {
+        "sequence": 13,
+        "horizon": 9,
+        "active": [],
+        "keys": 4,
+        "versions": 5,
+        "index_entries": {},
+        "journal_records": 1,
+        "history_base": 12,
+        "recovered_tail_bytes": 0,
+        "commits_since_open": 1,
+        "conflicts_since_open": 0,
+        "queries_since_open": 4
+      },
+      "journal_frames_after_commit": 1,
+      "changes_covering_new_commit": {
+        "http": 200,
+        "body": {
+          "records": [
+            {
+              "format": 1,
+              "sequence": 13,
+              "kind": "commit",
+              "transaction": "4bf3647bb0c9592131b1db20987e30bf",
+              "writes": [
+                {
+                  "relation": "spectra",
+                  "key": "int:9",
+                  "row": {
+                    "amplitude": 90,
+                    "band": "b9",
+                    "sample": 9,
+                    "valid": true
+                  }
+                }
+              ]
+            }
+          ],
+          "cursor": 13,
+          "head": 13,
+          "history_base": 12,
+          "more": false
+        }
+      },
+      "restart_stats": {
+        "sequence": 13,
+        "horizon": 9,
+        "active": [],
+        "keys": 4,
+        "versions": 5,
+        "index_entries": {},
+        "journal_records": 1,
+        "history_base": 12,
+        "recovered_tail_bytes": 0,
+        "commits_since_open": 0,
+        "conflicts_since_open": 0,
+        "queries_since_open": 0
+      },
+      "restart_query_http": 200
+    },
+    "C": {
+      "rto_seconds": 0.0701,
+      "startup_stats": {
+        "sequence": 15,
+        "horizon": 9,
+        "active": [],
+        "keys": 3,
+        "versions": 6,
+        "index_entries": {},
+        "journal_records": 0,
+        "history_base": 15,
+        "recovered_tail_bytes": 0,
+        "commits_since_open": 0,
+        "conflicts_since_open": 0,
+        "queries_since_open": 0
+      },
+      "installed_journal_header_base": 15,
+      "installed_journal_frames": 0,
+      "reachable_history": {
+        "0": {
+          "http": 410,
+          "error": "snapshot"
+        },
+        "1": {
+          "http": 410,
+          "error": "snapshot"
+        },
+        "2": {
+          "http": 410,
+          "error": "snapshot"
+        },
+        "3": {
+          "http": 410,
+          "error": "snapshot"
+        },
+        "4": {
+          "http": 410,
+          "error": "snapshot"
+        },
+        "5": {
+          "http": 410,
+          "error": "snapshot"
+        },
+        "6": {
+          "http": 410,
+          "error": "snapshot"
+        },
+        "7": {
+          "http": 410,
+          "error": "snapshot"
+        },
+        "8": {
+          "http": 410,
+          "error": "snapshot"
+        },
+        "9": {
+          "http": 200,
+          "matched": 3,
+          "rows": [
+            {
+              "amplitude": 14,
+              "band": "b1",
+              "sample": 1,
+              "valid": true
+            },
+            {
+              "amplitude": 23,
+              "band": "b2",
+              "sample": 2,
+              "valid": true
+            },
+            {
+              "amplitude": 33,
+              "band": "b3",
+              "sample": 3,
+              "valid": true
+            }
+          ]
+        },
+        "10": {
+          "http": 200,
+          "matched": 3,
+          "rows": [
+            {
+              "amplitude": 14,
+              "band": "b1",
+              "sample": 1,
+              "valid": true
+            },
+            {
+              "amplitude": 23,
+              "band": "b2",
+              "sample": 2,
+              "valid": true
+            },
+            {
+              "amplitude": 33,
+              "band": "b3",
+              "sample": 3,
+              "valid": true
+            }
+          ]
+        },
+        "11": {
+          "http": 200,
+          "matched": 3,
+          "rows": [
+            {
+              "amplitude": 14,
+              "band": "b1",
+              "sample": 1,
+              "valid": true
+            },
+            {
+              "amplitude": 23,
+              "band": "b2",
+              "sample": 2,
+              "valid": true
+            },
+            {
+              "amplitude": 33,
+              "band": "b3",
+              "sample": 3,
+              "valid": true
+            }
+          ]
+        },
+        "12": {
+          "http": 200,
+          "matched": 3,
+          "rows": [
+            {
+              "amplitude": 14,
+              "band": "b1",
+              "sample": 1,
+              "valid": true
+            },
+            {
+              "amplitude": 24,
+              "band": "b2",
+              "sample": 2,
+              "valid": true
+            },
+            {
+              "amplitude": 33,
+              "band": "b3",
+              "sample": 3,
+              "valid": true
+            }
+          ]
+        },
+        "13": {
+          "http": 200,
+          "matched": 3,
+          "rows": [
+            {
+              "amplitude": 14,
+              "band": "b1",
+              "sample": 1,
+              "valid": true
+            },
+            {
+              "amplitude": 24,
+              "band": "b2",
+              "sample": 2,
+              "valid": true
+            },
+            {
+              "amplitude": 34,
+              "band": "b3",
+              "sample": 3,
+              "valid": true
+            }
+          ]
+        },
+        "14": {
+          "http": 200,
+          "matched": 3,
+          "rows": [
+            {
+              "amplitude": 14,
+              "band": "b1",
+              "sample": 1,
+              "valid": true
+            },
+            {
+              "amplitude": 24,
+              "band": "b2",
+              "sample": 2,
+              "valid": true
+            },
+            {
+              "amplitude": 34,
+              "band": "b3",
+              "sample": 3,
+              "valid": true
+            }
+          ]
+        },
+        "15": {
+          "http": 200,
+          "matched": 2,
+          "rows": [
+            {
+              "amplitude": 14,
+              "band": "b1",
+              "sample": 1,
+              "valid": true
+            },
+            {
+              "amplitude": 34,
+              "band": "b3",
+              "sample": 3,
+              "valid": true
+            }
+          ]
+        },
+        "16": {
+          "http": 410,
+          "error": "snapshot"
+        }
+      },
+      "changes_at_base": {
+        "http": 200,
+        "body": {
+          "records": [],
+          "cursor": 15,
+          "head": 15,
+          "history_base": 15,
+          "more": false
+        }
+      },
+      "changes_before_base": {
+        "http": 410,
+        "error": "snapshot"
+      },
+      "changes_at_head": {
+        "http": 200,
+        "body": {
+          "records": [],
+          "cursor": 15,
+          "head": 15,
+          "history_base": 15,
+          "more": false
+        }
+      },
+      "new_commit": {
+        "sequence": 16,
+        "writes": 1
+      },
+      "stats_after_new_commit": {
+        "sequence": 16,
+        "horizon": 9,
+        "active": [],
+        "keys": 4,
+        "versions": 7,
+        "index_entries": {},
+        "journal_records": 1,
+        "history_base": 15,
+        "recovered_tail_bytes": 0,
+        "commits_since_open": 1,
+        "conflicts_since_open": 0,
+        "queries_since_open": 7
+      },
+      "journal_frames_after_commit": 1,
+      "changes_covering_new_commit": {
+        "http": 200,
+        "body": {
+          "records": [
+            {
+              "format": 1,
+              "sequence": 16,
+              "kind": "commit",
+              "transaction": "c3c6a7239d60e88cc4c8177187358093",
+              "writes": [
+                {
+                  "relation": "spectra",
+                  "key": "int:9",
+                  "row": {
+                    "amplitude": 90,
+                    "band": "b9",
+                    "sample": 9,
+                    "valid": true
+                  }
+                }
+              ]
+            }
+          ],
+          "cursor": 16,
+          "head": 16,
+          "history_base": 15,
+          "more": false
+        }
+      },
+      "restart_stats": {
+        "sequence": 16,
+        "horizon": 9,
+        "active": [],
+        "keys": 4,
+        "versions": 7,
+        "index_entries": {},
+        "journal_records": 1,
+        "history_base": 15,
+        "recovered_tail_bytes": 0,
+        "commits_since_open": 0,
+        "conflicts_since_open": 0,
+        "queries_since_open": 0
+      },
+      "restart_query_http": 200
+    }
+  },
+  "gaps": {
+    "all_non_serving_points": [
+      0,
+      6,
+      7,
+      8,
+      16
+    ],
+    "historical_gap_unprovable_by_images": [
+      6,
+      7,
+      8
+    ],
+    "pre_relation_point": [
+      0
+    ],
+    "beyond_newest_image": [
+      16
+    ],
+    "note": "points beyond the newest image still exist as source WAL frames; they are not frozen into any retained backup."
+  },
+  "sizes": {
+    "image-A.lmi": 1169,
+    "image-B.lmi": 801,
+    "image-C.lmi": 907,
+    "total_three_images": 2877,
+    "source_journal_bytes": 3419,
+    "source_checkpoint_bytes": null
+  },
+  "source_journal": {
+    "base": 0,
+    "frame_count": 16,
+    "kinds": {
+      "relation": 1,
+      "commit": 12,
+      "vacuum": 3
+    },
+    "truncated_tail_bytes": 0,
+    "bytes": 3419,
+    "sequence_span": [
+      1,
+      16
+    ],
+    "vacuum_records": [
+      [
+        10,
+        8
+      ],
+      [
+        11,
+        9
+      ],
+      [
+        14,
+        9
+      ]
+    ]
+  },
+  "tamper_probe": {
+    "exit_code": 1,
+    "stderr_tail": [
+      "2026/11/18 06:28:31 ERROR lamina stopped error=\"image format or digest mismatch\""
+    ],
+    "dir_published": false
+  },
+  "existing_dir_probe": {
+    "exit_code": 1,
+    "stderr_tail": [
+      "2026/11/18 06:28:32 ERROR lamina stopped error=\"restore requires a new directory: mkdir /workspace/eval/runs/run1/restored-A: file exists\""
+    ]
+  },
+  "measured_reachable_at_points": {
+    "A": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "B": [
+      9,
+      10,
+      11,
+      12
+    ],
+    "C": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ]
+  },
+  "union_reachable_at_points": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "all_cross_checks_passed": true,
+  "cross_check_count": 55
+}
